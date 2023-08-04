@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark mt-4">
+    <div class="container px-1">
+        <h1 class="text-light">Attendance Management using Smart Contract</h1>
+        <br>
+        <fieldset class="rounded p-2 shadow bg-dark-subtle">
+            <legend class="fw-bold">Student Details</legend>
+            <h2 id="studentDetails"></h2>
+            <form id="newStudentForm" class="row gap-2">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input class="form-control" id="id" type="text" placeholder="Enter Student ID" required>
+                </div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input class="form-control" id="age" type="text" placeholder="Enter Age" required>
+                </div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input class="form-control" id="fname" type="text" placeholder="Enter First Name" required>
+                </div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input class="form-control" id="lname" type="text" placeholder="Enter Last Name" required>
+                </div>
+                <div>
+                    <button class="btn btn-secondary" id="newStudentBtn" type="submit">Submit</button>
+                </div>
+            </form>
+        </fieldset>
+        <br>
+        <fieldset class="rounded p-2 shadow bg-dark-subtle">
+            <legend class="fw-bold">Increment Attendance</legend>
+            <h2 id="attendance"></h2>
+            <form class="row gap-2">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input class="form-control" id="idAttendance" type="text" placeholder="Enter the Student ID to increment the attendance" required>
+                </div>
+            </form>
+            <div class="mt-2">
+                <button id="btnIncAttnd" class="btn btn-secondary" type="submit">Increment Attendance</button>
+            </div>
+        </fieldset>
+        <br>
+
+        <fieldset class="rounded p-2 shadow bg-dark-subtle">
+            <legend class="fw-bold">Student Details</legend>
+
+            <h2 id="stdDetails"></h2>
+            <form class="row gap-2">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+                    <input class="form-control" id="idDetails" type="text" placeholder="Enter the  student ID  to get the details" required>
+                </div>
+            </form>
+            <div class="mt-2">
+                <button id="btnDetails" class="btn btn-secondary">Get Details</button>
+            </div>
+        </fieldset>
+
+
+        <br>
+        <fieldset class="rounded p-2 shadow bg-dark-subtle">
+            <legend class="fw-bold">Students Count</legend>
+            <h2 id="stdCount"></h2>
+            <button id="btnCount" class="btn btn-secondary">Students Count</button>
+        </fieldset>
+        <br>
+        <fieldset class="rounded p-2 shadow bg-dark-subtle">
+            <legend class="fw-bold">Students ID List</legend>
+            <h2 id="stdIds"></h2>
+            <button id="btnStdIds" class="btn btn-secondary">Get Student IDs</button>
+        </fieldset>
+    </div>
+
+    <!-- Web3 -->
+    <script src="node_modules/web3/dist/web3.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- App.js -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
